@@ -23,7 +23,7 @@ export default {
   name: "AdminView",
   data() {
     return {
-      id: 0,
+      id: 1,
       title: "",
       image: "",
       description: ""
@@ -32,13 +32,13 @@ export default {
   methods: {
     handleSubmit(event) {
       event.preventDefault(); //prevent the form from refreshing the page
-      this.id++;
       this.$emit("createProject", {
         id: this.id,
         title: this.title,
         image: this.image,
         description: this.description
       });
+      this.id++;
       this.clear();
     },
 

@@ -15,15 +15,14 @@
 
     <div>
       <admin-view v-if="isAdmin" @createProject="addProject" />
-      <user-view
-        v-else
-        v-for="project in allProjects"
+      <user-view v-else v-bind:projects="allProjects" />
+      <!-- v-for="project in allProjects"
         v-bind:key="project.id"
         v-bind:id="project.id"
         v-bind:title="project.title"
         v-bind:description="project.description"
-        v-bind:image="project.image"
-      />
+        v-bind:image="project.image" -->
+
       <!-- what does the key do??? -->
     </div>
   </div>
